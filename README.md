@@ -2,7 +2,9 @@
 
 ### NeuraVis is a neural visualization engine that turns ideas into motion.
 
-- NeuraVis converts plain-language prompts into Manim animations using an **LLM-driven code generation pipeline**, then executes Manim to render MP4 videos and persists metadata and assets to cloud storage.
+
+
+- This engine converts plain-language prompts into Manim animations using an **LLM-driven code generation pipeline**, then executes Manim to render MP4 videos and persists metadata and assets to cloud storage.
 
 
 -----
