@@ -5,9 +5,13 @@
 - NeuraVis converts plain-language prompts into Manim animations using an **LLM-driven code generation pipeline**, then executes Manim to render MP4 videos and persists metadata and assets to cloud storage.
 
 
+-----
+
+
+
 ### 🧩 Working architecture (compact)
 
-''' 
+```
 
 Text Prompt
      ↓
@@ -21,15 +25,19 @@ Render Pipeline
      ↓
 Encoded Video Output
 
-'''
+```
 
 
+-------
 
 
 ### ⚙ Pipeline
 
 Prompt → Semantic parse → Scene plan → Manim.py → Headless render → FFmpeg → MP4 → (store → deliver)
 
+
+
+--------
 
 
 ### 🔧 Core tech 
@@ -48,7 +56,7 @@ Prompt → Semantic parse → Scene plan → Manim.py → Headless render → FF
 
 
 
-----
+-----
 
 
 
@@ -75,7 +83,11 @@ NeuraVis/
 ----
 
 
+
+
 ### ▶️ Quick start — local (dev)
+
+
 
 #### Backend
 
@@ -95,6 +107,7 @@ npm run dev
 ```
 
 
+
 ### ▶️ Quick start — Docker
 
 ```
@@ -103,7 +116,8 @@ docker compose up --build
 # Backend exposed on :8000 by default
 ```
 
-----
+
+-----
 
 
 ### ✅ Minimal smoke test
@@ -115,7 +129,7 @@ Start services.
 POST a tiny prompt to the generate endpoint → confirm .py in animations/ and .mp4 in media/.
 
 
----- 
+----- 
 
 
 ### 🚀 Future Roadmap
