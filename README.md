@@ -8,6 +8,7 @@
 ## 🧩 Working architecture (compact)
 
 ''' 
+
 Text Prompt
      ↓
 LLM Reasoning
@@ -50,7 +51,8 @@ Prompt → Semantic parse → Scene plan → Manim.py → Headless render → FF
 
 ## 📂 Repo layout (short)
 
-''' 
+```
+
 NeuraVis/
 ├─ Backend/         # FastAPI, Model layer (LLM → code), auth, DB config
 │  ├─ Model/        # prompt→plan→code synthesis
@@ -64,7 +66,7 @@ NeuraVis/
 ├─ docker-compose.yml
 └─ .env.example
 
-'''
+```
 
 
 ----
@@ -73,30 +75,30 @@ NeuraVis/
 ## ▶️ Quick start — local (dev)
 
 # Backend
-'''
+
+```
 cd Backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python main.py         
-
-'''
+```
 
 # Frontend (dev)
+
+```
 cd ../frontend
 npm install
 npm run dev
-
+```
 
 
 ## ▶️ Quick start — Docker
-'''
+
+```
 # from repo root
 docker compose up --build
 # Backend exposed on :8000 by default
-'''
-
-The container installs Manim native deps (ffmpeg, cairo/pango, TeX) so renders are deterministic headless.
-
+```
 
 ----
 
@@ -105,7 +107,7 @@ The container installs Manim native deps (ffmpeg, cairo/pango, TeX) so renders a
 
 Start services.
 
-GET http://localhost:8000/health (or root).
+``` GET http://localhost:8000/health (or root). ```
 
 POST a tiny prompt to the generate endpoint → confirm .py in animations/ and .mp4 in media/.
 
