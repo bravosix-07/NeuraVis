@@ -1,8 +1,8 @@
-## 🧠⚡ NeuraVis
+# 🧠⚡ NeuraVis
 
-NeuraVis is a neural visualization engine that turns ideas into motion.
+### NeuraVis is a neural visualization engine that turns ideas into motion.
 
-NeuraVis converts plain-language prompts into Manim animations using an LLM-driven code generation pipeline, then executes Manim to render MP4 videos and persists metadata and assets to cloud storage.
+- NeuraVis converts plain-language prompts into Manim animations using an **LLM-driven code generation pipeline**, then executes Manim to render MP4 videos and persists metadata and assets to cloud storage.
 
 
 ## 🧩 Working architecture (compact)
@@ -30,17 +30,21 @@ Prompt → Semantic parse → Scene plan → Manim.py → Headless render → FF
 
 ## 🔧 Core tech 
 
-LLM orchestration: LangChain patterns + OpenAI / Google GenAI adapters
+**LLM orchestration**: LangChain patterns + OpenAI / Google GenAI adapters
 
-Animation: Manim (programmatic scenes) + FFmpeg (encode)
+**Animation**: Manim (programmatic scenes) + FFmpeg (encode)
 
-API / Orchestration: FastAPI (Python)
+**API / Orchestration**: FastAPI (Python)
 
-Persistence : Supabase (Postgres + Storage)
+**Persistence** : Supabase (Postgres + Storage)
 
-UI: Next.js (React, TypeScript, CSS)
+**UI**: Next.js (React, TypeScript, CSS)
 
-Containerization : Docker
+**Containerization** : Docker
+
+
+
+----
 
 
 
@@ -61,6 +65,9 @@ NeuraVis/
 └─ .env.example
 
 '''
+
+
+----
 
 
 ## ▶️ Quick start — local (dev)
@@ -91,6 +98,8 @@ docker compose up --build
 The container installs Manim native deps (ffmpeg, cairo/pango, TeX) so renders are deterministic headless.
 
 
+----
+
 
 ## ✅ Minimal smoke test
 
@@ -101,15 +110,16 @@ GET http://localhost:8000/health (or root).
 POST a tiny prompt to the generate endpoint → confirm .py in animations/ and .mp4 in media/.
 
 
+---- 
 
 
 ## 🚀 Future Roadmap
 
-TTS / voiceover per scene (synchronized)
+- TTS / voiceover per scene (synchronized)
 
-Preset visual styles (whiteboard, cinematic, sketch)
+- Preset visual styles (whiteboard, cinematic, sketch)
 
-Low-res realtime preview for iteration speed
+- Low-res realtime preview for iteration speed
 
-GPU render pool for scale (optional CUDA workers)
+- GPU render pool for scale (optional CUDA workers)
 
